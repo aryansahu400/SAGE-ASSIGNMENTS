@@ -1,12 +1,4 @@
-//Write a program to print different data types in ‘c’ and their ranges
-
 #include<stdio.h>
-#include<conio.h>
-#include<limits.h>
-
-int main()
-{
-	#include<stdio.h>
 #include<conio.h>
 #include<limits.h>
 
@@ -31,10 +23,5 @@ int main()
 	
 	
 	
-	return 0;
-}
-	
-	
-
 	return 0;
 }
