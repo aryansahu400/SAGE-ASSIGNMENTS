@@ -1,9 +1,12 @@
+\\Write a program to create structure for a account holder in a bank with following fields: name,account number,address, balance,and display the details of five account holders.
+
 #include <stdio.h>
 
 struct customer
 {
     int account_no;
     char name[80];
+    char address[80];
     int balance;
 };
 
@@ -12,7 +15,7 @@ void display(struct customer[], int);
 int main()
 {
     struct customer data[20];
-    int n, choice, account_no, amount, index;
+    int n, choice, account_no, amount,address, index;
 
     printf("Banking System\n\n");
     printf("Number of customer records you want to enter? : ");
@@ -50,6 +53,8 @@ void accept(struct customer list[80], int s)
         //fflush(stdin);
         printf("Enter name : ");
         scanf("%s",&list[i].name);
+        printf("Enter address : ");
+        scanf("%s",&list[i].address);
         printf("Enter Blance: ");
         scanf("%d",&list[i].balance);
     } 
@@ -62,7 +67,7 @@ void display(struct customer list[80], int s)
     printf("\n\nA/c No\tName\tBalance\n");
     for (i = 0; i < s; i++)
     {
-        printf("%d\t%s\t%d\n", list[i].account_no, list[i].name,
+        printf("%d\t%s\t%s\t%d\n", list[i].account_no, list[i].name,list[i].address,
             list[i].balance);
     } 
 }
